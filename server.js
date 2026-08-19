@@ -6,7 +6,6 @@ const app = express();
 
 const statsRoutes = require('./routes/stats.routes');
 
-const routes = require('./routes');
 const departmentRoutes = require('./routes/department.routes');
 const courseRoutes = require('./routes/course.routes');
 const studentRoutes = require('./routes/student.routes');
@@ -30,7 +29,6 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use('/uploads', express.static('uploads'));
 
-app.use('/', routes);
 app.use('/api/departments', departmentRoutes);
 app.use('/api/courses', courseRoutes);
 app.use('/api/students', studentRoutes);
